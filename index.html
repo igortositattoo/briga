@@ -224,6 +224,9 @@ const engine = new Engine(GODOT_CONFIG);
 	}
 }());
 		</script>
-	</body>
+	<div id="gire"><div style="font-size:64px;line-height:1">&#x21BB;</div><div>Gire o celular para jogar</div></div>
+<style>#gire{display:none;position:fixed;inset:0;z-index:99999;background:#000;color:#fff;font:600 22px system-ui,sans-serif;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}@media (orientation:portrait) and (pointer:coarse){#gire{display:flex}}</style>
+<script>(function(){function deitar(){var d=document.documentElement;var f=d.requestFullscreen||d.webkitRequestFullscreen;var p=null;try{if(f&&!document.fullscreenElement){p=f.call(d,{navigationUI:'hide'})}}catch(e){}function travar(){try{if(screen.orientation&&screen.orientation.lock){screen.orientation.lock('landscape').catch(function(){})}}catch(e){}}if(p&&p.then){p.then(travar,travar)}else{travar()}}if(matchMedia('(pointer:coarse)').matches){['touchend','pointerup','click'].forEach(function(t){window.addEventListener(t,deitar,{capture:true})})}})();</script>
+</body>
 </html>
 
